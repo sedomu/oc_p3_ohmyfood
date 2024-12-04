@@ -79,7 +79,7 @@ body p {
 .hero button {
   font-weight: 500;
   color: #FFFFFF;
-  background: linear-gradient(202deg, #e16fda, #a35bdc);
+  background: linear-gradient(3.11deg, rgb(147, 86, 220), rgb(255, 121, 218));
   height: 50px;
   border-radius: 25px;
   border: none;
@@ -88,10 +88,4 @@ body p {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   font-weight: 500;
-}
-.hero .my-fucking-gradient {
-  width: 200px;
-  height: 200px;
-  border: solid 1px black;
-  background: linear-gradient(202deg, #e16fda, #a35bdc);
 }/*# sourceMappingURL=main.css.map */
