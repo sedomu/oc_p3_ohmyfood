@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <!-- I prefer to include the logo as an image file to avoid potential issues with font loading -->
-        <div class="header__logo"><img src="./assets/images/logo/ohmyfood@2x.svg"></div>
+        <div class="header__logo"><img src="./assets/images/logo/ohmyfood_black.svg"></div>
         <div class="header__localisation">
             <img src="./assets/images/icons/pin.svg" alt="pin icon">
             <p>Paris, Belleville</p>
@@ -45,8 +45,8 @@
 
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <div class="restaurants__card--new">
-                <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo of a plate on a restaurant table">
+            <div class="restaurants__card restaurants__card--new">
+                <img class="thumbnail" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo of a plate on a restaurant table">
                 <div class="new">Nouveau</div>
                 <div class="txt">
                     <h3>La palette du goût</h3>
@@ -54,8 +54,8 @@
                 </div>
                 <img class="like" src="./assets/images/icons/heart.svg" alt="heart logo">
             </div>
-            <div class="restaurants__card--new">
-                <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo of a plate on a restaurant table">
+            <div class="restaurants__card restaurants__card--new">
+                <img class="thumbnail" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo of a plate on a restaurant table">
                 <div class="new">Nouveau</div>
                 <div class="txt">
                     <h3>La note enchantée</h3>
@@ -64,7 +64,7 @@
                 <img class="like" src="./assets/images/icons/heart.svg" alt="heart logo">
             </div>
             <div class="restaurants__card">
-                <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo of a plate on a restaurant table">
+                <img class="thumbnail" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo of a plate on a restaurant table">
                 <div class="new">Nouveau</div>
                 <div class="txt">
                     <h3>À la française</h3>
@@ -73,7 +73,7 @@
                 <img class="like" src="./assets/images/icons/heart.svg" alt="heart logo">
             </div>
             <div class="restaurants__card">
-                <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo of a plate on a restaurant table">
+                <img class="thumbnail" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo of a plate on a restaurant table">
                 <div class="new">Nouveau</div>
                 <div class="txt">
                     <h3>Le délice des sens</h3>
@@ -84,7 +84,8 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <img class="footer_logo" src="./assets/images/logo/ohmyfood_white.svg">
         <nav class="navbar">
             <div class="navbar__link">
                 <img src="./assets/images/icons/ustensils.svg" alt="ustensils icon">
@@ -94,16 +95,15 @@
                 <img src="./assets/images/icons/partners.svg" alt="shaking hands icon">
                 <a href="#">Devenir partenaire</a>
             </div>
-            <div class="navbar__link--legal">
+            <div class="navbar__link navbar__link--legal">
                 <img src="./assets/images/icons/empty.svg" alt="empty image placeholder">
                 <a href="#">Mentions légales</a>
             </div>
-            <div class="navbar__link--legal">
+            <div class="navbar__link navbar__link--legal">
                 <img src="./assets/images/icons/empty.svg" alt="empty image placeholder">
                 <a href="#">Contact</a>
             </div>
         </nav>
-        <img class="footer_logo" src="./assets/images/logo/ohmyfood@2x.svg">
     </footer>
 </body>
 </html>
