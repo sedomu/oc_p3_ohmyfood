@@ -23,6 +23,7 @@ $xlarge: 1.5rem; //24px
 $large: 1.125rem; //18px
 $medium: 1rem; //16px
 $small: 0.938rem; //15px
+$xsmall: 0.875rem; //14px
 
 // mixins
 @mixin title-font {
@@ -137,6 +138,46 @@ body {
         box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
         font-size: $medium;
         font-weight: 500;
+    }
+}
+
+.steps {
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &__item {
+        display:flex;
+        background-color: $light-gray-background;
+        border-radius: 20px;
+        border: none;
+        height: 72px;
+        align-items: center;
+        @include card-shadow();
+
+        .number {
+            color:$light-gray-background;
+            background-color: $primary-color;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: $xsmall;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            position: relative;
+            left: -12px;
+        }
+
+        > img {
+            position: relative;
+            left: 9px;
+        }
+
+        .txt {
+            padding-left: 28px;
+        }
     }
 }
 

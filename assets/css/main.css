@@ -88,4 +88,40 @@ body p {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   font-weight: 500;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.steps__item {
+  display: flex;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  border: none;
+  height: 72px;
+  align-items: center;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
+}
+.steps__item .number {
+  color: #f6f6f6;
+  background-color: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  left: -12px;
+}
+.steps__item > img {
+  position: relative;
+  left: 9px;
+}
+.steps__item .txt {
+  padding-left: 28px;
 }/*# sourceMappingURL=main.css.map */
