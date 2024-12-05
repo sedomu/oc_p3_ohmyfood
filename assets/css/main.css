@@ -101,6 +101,7 @@ body p {
   border-radius: 20px;
   border: none;
   height: 72px;
+  margin-left: 12px;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
 }
