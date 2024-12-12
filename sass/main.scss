@@ -1,9 +1,9 @@
-// imports
+// ###################### imports
 @import url(/assets/css/fonts.css);
 
-// variables
+// ###################### variables
 
-// theme colors
+// ###################### theme colors
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -18,14 +18,28 @@ $medium-gray-text: #353535;
 // svg source values have the initial stops' offsets, inkscape translate it into shape borders' values
 $gradient-button: linear-gradient(3.11deg, rgb(147, 86, 220), rgb(255, 121, 218));
 
-// font sizes
+// ###################### font sizes
+$desktop-title: 2.5rem; //40px
 $xlarge: 1.5rem; //24px
 $large: 1.125rem; //18px
 $medium: 1rem; //16px
 $small: 0.938rem; //15px
 $xsmall: 0.875rem; //14px
 
-// mixins
+// ###################### breakpoints
+@mixin bp-desktop {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin bp-desktop--large {
+    @media screen and (min-width: 1440px){
+        @content;
+    }
+}
+
+// ###################### mixins
 @mixin title-font {
     font-family: 'Shrikhand' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -38,7 +52,7 @@ $xsmall: 0.875rem; //14px
     box-shadow: 0 4px 15px 0 #00000026;
 }
 
-// base
+// ###################### base
 body {
     @include regular-font();
     font-size: $medium;
@@ -55,6 +69,10 @@ body {
 
     section {
         padding: 48px 20px;
+
+        @include bp-desktop() {
+            padding: 50px 180px;
+        }
     }
 
     h2 {
@@ -76,6 +94,8 @@ body {
     }
 }
 
+
+// ###################### header
 .header {
     display: flex;
     flex-direction: column;
@@ -113,6 +133,8 @@ body {
     }
 }
 
+
+// ###################### hero
 .hero {
     display: flex;
     flex-direction: column;
@@ -124,6 +146,11 @@ body {
         margin-bottom: 10px;
         width: 75vw;
         align-self: center;
+
+        @include bp-desktop() {
+            margin-bottom: 0;
+            font-size: $desktop-title;
+        }
     }
 
     p {
@@ -131,6 +158,11 @@ body {
         font-size: $large;
         padding-bottom: 27px;
         width: 85vw;
+
+        @include bp-desktop() {
+            padding-bottom: 0;
+            
+        }
     }
 
     button {
@@ -145,13 +177,42 @@ body {
         box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
         font-size: $medium;
         font-weight: 500;
+
+        @include bp-desktop() {
+            max-width: 218px;
+        }
+    }
+
+    & > * {
+        @include bp-desktop() {
+            max-width: 645px;
+            line-height: 50px;
+        }
+    }
+
+    @include bp-desktop() {
+        gap: 18px;
     }
 }
 
+// ###################### steps
 .steps {
     display:flex;
     flex-direction: column;
     gap: 25px;
+
+    &__items {
+        display:flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @include bp-desktop(){
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:0;
+            justify-content: space-evenly;
+        }
+    }
 
     &__item {
         display:flex;
@@ -186,14 +247,31 @@ body {
         .txt {
             padding-left: 28px;
         }
+
+        @include bp-desktop(){
+            flex-basis: 335px;
+        }
     }
 }
 
+// ###################### cards
 .restaurants {
     display: flex;
     flex-direction: column;
     gap: 18px;
     background-color: $light-gray-background;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        @include bp-desktop(){
+            flex-direction: row;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    }
 
     &__card {
         width:100%;
@@ -249,22 +327,42 @@ body {
             bottom: 33px;
             right: 33px;
         }
+
+        @include bp-desktop(){
+            flex: 1 1 10%;
+            min-width: 350px;
+        }
+    }
+
+    @include bp-desktop(){
+        gap: 25px;
     }
 }
 
+// ###################### footer
 .footer {
     padding: 25px; 
     background-color: $medium-gray-text;
 
     .footer_logo {
         width: 100px;
+        height: fit-content;
         margin-bottom: 16px;
+
+        @include bp-desktop(){
+            margin: 0 60px;
+        }
     }
 
     .navbar {
         display: flex;
         flex-direction: column;
         gap: 7px;
+
+        @include bp-desktop(){
+            flex-direction: row;
+            gap: 25px;
+        }
     }
 
     .navbar__link {
@@ -280,6 +378,18 @@ body {
                 padding-left:0;
             }
         }
+
+        @include bp-desktop(){
+            flex-basis: 1;
+        }
+    }
+
+    @include bp-desktop(){
+        height: 120px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 0;
     }
 }
 
