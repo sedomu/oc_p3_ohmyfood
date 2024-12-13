@@ -209,8 +209,8 @@ body {
         @include bp-desktop(){
             flex-direction: row;
             flex-wrap: wrap;
-            gap:0;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 35px;
         }
     }
 
@@ -249,7 +249,9 @@ body {
         }
 
         @include bp-desktop(){
-            flex-basis: 335px;
+            flex:1;
+            min-width: 320px;
+            max-width: 320px;
         }
     }
 }
@@ -376,6 +378,10 @@ body {
         &--legal {
             a {
                 padding-left:0;
+            }
+
+            img {
+                display: none;
             }
         }
 

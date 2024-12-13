@@ -142,8 +142,8 @@ body p {
   .steps__items {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 35px;
   }
 }
 .steps__item {
@@ -179,7 +179,9 @@ body p {
 }
 @media screen and (min-width: 768px) {
   .steps__item {
-    flex-basis: 335px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -294,6 +296,9 @@ body p {
 }
 .footer .navbar__link--legal a {
   padding-left: 0;
+}
+.footer .navbar__link--legal img {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .footer .navbar__link {
