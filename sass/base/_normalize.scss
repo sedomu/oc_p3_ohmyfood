@@ -79,3 +79,11 @@ body {
         text-decoration: none;
     }
 }
+
+// ###################### main
+main { //to fix flying footer
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 113px - 120px);
+    align-items: center;
+}
