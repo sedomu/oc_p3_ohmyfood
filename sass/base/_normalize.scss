@@ -1,34 +1,34 @@
 // ##################### fonts #####################
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 700;
     font-style: normal;
     src: url(../fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 300;
     font-style: normal;
     src: url(../fonts/Roboto-Light.ttf);
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 500;
     font-style: normal;
     src: url(../fonts/Roboto-Medium.ttf);
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 400;
     font-style: normal;
     src: url(../fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Shrikhand';
+    font-family: "Shrikhand";
     font-weight: 400;
     font-style: normal;
     src: url(../fonts/Shrikhand-Regular.ttf);
@@ -81,7 +81,8 @@ body {
 }
 
 // ###################### main
-main { //to fix flying footer
+main {
+    //to fix flying footer
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 113px - 120px);

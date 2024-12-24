@@ -8,7 +8,7 @@ input {
     padding: 2px;
 
     & > input {
-        display:none;
+        display: none;
     }
 
     input:checked + label i::before {
@@ -24,7 +24,7 @@ input {
         -webkit-text-stroke: 0px; // ATTENTION NON-STANDARD SELON MDN
     }
 
-    .fa-heart{
+    .fa-heart {
         font-size: 20px;
         color: transparent;
         -webkit-text-stroke: $black-point 1px; // ATTENTION NON-STANDARD SELON MDN
@@ -48,7 +48,7 @@ input {
             right: 50%;
             bottom: 50%;
             font-size: 0px;
-            position:absolute;
+            position: absolute;
             transition: all 400ms ease-out;
         }
     }

@@ -26,7 +26,6 @@
 
         @include bp-desktop() {
             padding-bottom: 0;
-            
         }
     }
 
@@ -40,7 +39,7 @@
         border: none;
         padding: 0 18px;
         width: 60vw;
-        box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
         font-size: $medium;
         font-weight: 500;
         position: relative;
@@ -65,17 +64,17 @@
 
 // ###################### steps
 .steps {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 25px;
     width: calc(100% - 40px);
 
     &__items {
-        display:flex;
+        display: flex;
         flex-direction: column;
         gap: 25px;
 
-        @include bp-desktop(){
+        @include bp-desktop() {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
@@ -84,7 +83,7 @@
     }
 
     &__item {
-        display:flex;
+        display: flex;
         background-color: $light-gray-background;
         border-radius: 20px;
         border: none;
@@ -94,7 +93,7 @@
         @include card-shadow();
 
         .number {
-            color:$light-gray-background;
+            color: $light-gray-background;
             background-color: $primary-color;
             width: 24px;
             height: 24px;
@@ -117,20 +116,20 @@
             padding-left: 28px;
         }
 
-        @include bp-desktop(){
-            flex:1;
+        @include bp-desktop() {
+            flex: 1;
             min-width: 320px;
             max-width: 320px;
         }
     }
-    @include bp-desktop(){
+    @include bp-desktop() {
         width: calc(100% - 360px);
     }
 }
 
 // ###################### restaurants cards
 .restaurants {
-    flex:1; //to fix flying footer
+    flex: 1; //to fix flying footer
 
     width: calc(100% - 40px);
 
@@ -144,7 +143,7 @@
         flex-direction: column;
         gap: 18px;
 
-        @include bp-desktop(){
+        @include bp-desktop() {
             flex-direction: row;
             gap: 50px;
             flex-wrap: wrap;
@@ -152,7 +151,7 @@
     }
 
     &__card {
-        width:100%;
+        width: 100%;
         border-radius: 15px;
         overflow: hidden;
         height: 250px;
@@ -164,21 +163,21 @@
             display: none;
         }
 
-        &--new{
+        &--new {
             .new {
-                display:inline-block;
+                display: inline-block;
                 position: absolute;
                 background-color: $tertiary-color;
                 color: $tertiary-color-contrast;
                 font-size: $xsmall;
                 height: 30px;
                 width: 80px;
-            
+
                 top: 12px;
                 right: 12px;
                 border-radius: 2px;
 
-                display:flex;
+                display: flex;
                 justify-content: center;
                 align-items: center;
             }
@@ -206,13 +205,13 @@
             right: 33px;
         }
 
-        @include bp-desktop(){
+        @include bp-desktop() {
             flex: 1 1 10%;
             min-width: 350px;
         }
     }
 
-    @include bp-desktop(){
+    @include bp-desktop() {
         gap: 25px;
         width: calc(100% - 360px);
     }
