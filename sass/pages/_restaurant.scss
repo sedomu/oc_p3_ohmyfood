@@ -1,0 +1,189 @@
+// ###################### restaurant hero
+.restaurant-hero {
+    padding: 0;
+    width: 100%;
+    height: 375px;
+
+    & > img {
+        width: 100%;  
+        height: 375px;
+        object-fit: cover;
+    }
+}
+
+// ###################### menu
+.restaurant-menu {
+    width: calc(100% - 24px);
+    background-color: $light-gray-background;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+    @include bp-desktop(){
+        max-width: 1055px;
+    }
+}
+
+// ###################### menu title
+.restaurant-menu__title {
+    width: calc(100% - 8px);
+    display: flex;
+    align-items: first baseline;
+    margin-top: 42px;
+
+    & > h1 {
+        flex: 1;
+        @include title-font();
+        color: $black-point;
+        font-size: $xxlarge;
+        font-weight: 400;
+        margin: 0 0 -20px 0;
+
+        @include bp-desktop(){
+            flex: 0 0 content;
+        }
+    }
+
+    & > .like-fa {
+        flex: 0 0 50px;
+
+        @include bp-desktop(){
+            flex: 0 0 content;
+            margin-left: 24px;
+        }
+    }
+
+    @include bp-desktop(){
+        justify-content: center;
+    }
+}
+
+
+// ###################### menu cards
+.restaurant-menu__courses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include bp-desktop(){
+        max-width: 630px;
+    }
+}
+
+
+.restaurant-menu__category {
+    & > h2 {
+        color: $black-point;
+        @include regular-font();
+        font-weight: 300;
+        font-size: $medium;
+        line-height: 2;
+        text-transform: uppercase;
+    
+        &::after {
+            display: block;
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: $tertiary-color;
+        }
+    }    
+}
+
+.restaurant-menu__course{
+    height: 40px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: $white-point;
+    @include card-shadow();
+    overflow: hidden;
+    display: flex;
+
+    & > .txt {
+        flex: 1;
+        color: $black-point;
+        max-width: calc(100% - 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & > h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: $large;
+            font-weight: 500;
+        }
+
+        & > p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: $small;
+            font-weight: 300;
+        }
+    } 
+
+    & > .price {
+        align-self: flex-end;
+        vertical-align: bottom;
+        font-size: $small;
+        color: $medium-gray-text;
+        font-weight: 700;
+        width: 30px;
+        text-align: right;
+    }
+
+    // & > .choice {
+    //     width: 60px;
+    //     background-color: $tertiary-color;
+    //     // border-radius: 0 15px 15px 0;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     line-height: 0;
+    //     background-image: url(../assets/images/icons/check.svg);
+    //     // transform: translateX(100%);
+
+
+    //     &::before {
+    //         content: "25€";
+    //         right: 75px;
+    //         line-height: 1;
+    //         bottom: 15px;
+    //         position: absolute;
+
+    //         font-size: $small;
+    //         color: $medium-gray-text;
+    //         font-weight: 700;
+    //     }
+
+    //     & > input {
+    //         display: none;
+    //     }
+    // }
+}
+
+.button__animated {
+    cursor: pointer;
+    font-weight: 500;
+    color: $white-point;
+    background: $gradient-button;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
+    font-size: $medium;
+    position: relative;
+
+    margin-bottom: 40px;
+}
+
+
+

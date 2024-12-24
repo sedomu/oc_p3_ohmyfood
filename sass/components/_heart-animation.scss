@@ -1,0 +1,55 @@
+input {
+    display: none;
+}
+
+.like-fa {
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+
+    & > input {
+        display:none;
+    }
+
+    input:checked + label i::before {
+        opacity: 0;
+    }
+
+    input:checked + label i::after {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 20px;
+        -webkit-text-stroke: 0px; // ATTENTION NON-STANDARD SELON MDN
+    }
+
+    .fa-heart{
+        font-size: 20px;
+        color: transparent;
+        -webkit-text-stroke: $black-point 1px; // ATTENTION NON-STANDARD SELON MDN
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::before {
+            opacity: 1;
+            transition: opacity 400ms linear;
+        }
+
+        &::after {
+            background: linear-gradient(192.74deg, #9356dcff, #ff79daff);
+            content: "\f004";
+            background-clip: text;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            bottom: 50%;
+            font-size: 0px;
+            position:absolute;
+            transition: all 400ms ease-out;
+        }
+    }
+}

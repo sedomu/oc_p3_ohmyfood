@@ -1,0 +1,57 @@
+// ###################### footer
+.footer {
+    padding: 25px; 
+    background-color: $medium-gray-text;
+
+    .footer_logo {
+        width: 100px;
+        height: fit-content;
+        margin-bottom: 16px;
+
+        @include bp-desktop(){
+            margin: 0 60px;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        @include bp-desktop(){
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+
+    .navbar__link {
+        a {
+            color: $white-point;
+            text-decoration: none;
+            font-weight: 500;
+            padding-left: 10px;
+        }
+
+        &--legal {
+            a {
+                padding-left:0;
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        @include bp-desktop(){
+            flex-basis: 1;
+        }
+    }
+
+    @include bp-desktop(){
+        height: 114px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:end;
+        padding: 0 0 30px 0;
+    }
+}

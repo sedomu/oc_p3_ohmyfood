@@ -1,0 +1,28 @@
+.button__animated {
+    transition: box-shadow 200ms ease-out;
+
+    &::before{
+        content: "";
+        background: $gradient-button-mask;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        border-radius: 25px;
+        opacity: 0;
+        transition: opacity 300ms ease-out;
+    }
+
+    &:hover{
+        box-shadow: 0 4px 10px 2px rgba(0,0,0,.4);
+
+        &::before{
+            opacity: 1;
+        }
+    }
+
+    @include bp-desktop() {
+        max-width: 218px;
+    }
+}

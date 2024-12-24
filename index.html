@@ -10,19 +10,19 @@
 <body>
     <header class="header">
         <!-- I prefer to include the logo as an image file to avoid potential issues with font loading -->
-        <div class="header__logo"><img src="./assets/images/logo/ohmyfood_black.svg"></div>
+        <div class="header__logo"><a href="../index.html"><img src="../assets/images/logo/ohmyfood_black.svg"></a></div>
         <div class="header__localisation">
             <img src="./assets/images/icons/pin.svg" alt="pin icon">
             <p>Paris, Belleville</p>
         </div>
-        <h1 class="sr-only">Page sans titre principal</h1>
+        <h1 class="sr-only">Oh My Food!</h1>
     </header>
 
     <main>
         <section class="hero">
             <h2>Réservez le menu qui vous convient </h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <button class="button__animated">Explorer nos restaurants</button>
         </section>
 
         <section class="steps">
@@ -51,7 +51,7 @@
             <div class="restaurants__items">
                 
                 
-                <div class="restaurants__card restaurants__card--new"><a href="#">
+                <div class="restaurants__card restaurants__card--new"><a href="./restaurants/la-palette-du-gout.html">
                     <img class="thumbnail" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo of a plate on a restaurant table">
                     <div class="new">Nouveau</div>
                     <div class="txt">
@@ -74,9 +74,10 @@
                         <p>Charonne</p>
                     </div>
                     <div class="like-fa">
-                        <input type="checkbox" id="2"><label for="2">
-                            <i class="fa-solid fa-heart"></i>
-                        </label>
+                        <input type="checkbox" id="2">
+                            <label for="2">
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
                     </div>
                 </div>
                 <div class="restaurants__card">
