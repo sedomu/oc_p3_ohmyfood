@@ -1,17 +1,21 @@
 // ###################### theme colors (no theme file, because only one)
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
 $tertiary-color-contrast: #008766;
 $black-point: #000000;
-$white-point: #FFFFFF;
+$white-point: #ffffff;
 $light-gray-background: #f6f6f6;
 $medium-gray-background: #eaeaea;
 $medium-gray-text: #353535;
 
 // gradient values measured with inkscape based on svg export from figma
 // svg source values have the initial stops' offsets, inkscape translate it into shape borders' values
-$gradient-button: linear-gradient(3.11deg, rgb(147, 86, 220), rgb(255, 121, 218));
+$gradient-button: linear-gradient(
+    3.11deg,
+    rgb(147, 86, 220),
+    rgb(255, 121, 218)
+);
 $gradient-button-mask: #ffffff26;
 
 // ###################### font sizes
