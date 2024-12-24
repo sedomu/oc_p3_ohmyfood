@@ -479,6 +479,7 @@ main {
 .restaurant-menu__course > .txt {
   flex: 1;
   color: #000000;
+  min-width: calc(100% - 100px);
   max-width: calc(100% - 30px);
   display: flex;
   flex-direction: column;
@@ -598,4 +599,32 @@ input {
   .button__animated {
     max-width: 218px;
   }
+}
+
+.check {
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+}
+.check .check__block {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  margin-top: -15px;
+  width: 60px;
+  margin-left: 20px;
+  margin-right: -75px;
+  transition: all 250ms ease-out;
+}
+.check > input {
+  display: block;
+  left: 15px;
+  display: none;
+}
+.check > input:checked + .check__block {
+  margin-left: 20px;
+  margin-right: -15px;
+  width: 60px;
 }/*# sourceMappingURL=main.css.map */
