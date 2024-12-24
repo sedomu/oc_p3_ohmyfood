@@ -1,0 +1,32 @@
+.check {
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+
+    .check__block {
+        background-color: $tertiary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        margin-top: -15px;
+        width: 60px;
+        margin-left: 20px;
+        margin-right: -75px;
+
+        transition: all 250ms ease-out;
+
+    }
+
+    & > input {
+        display: block;
+        left: 15px;
+        display: none;
+
+        &:checked + .check__block {
+            margin-left: 20px;
+            margin-right: -15px;
+            width:60px;
+        }
+    }
+}

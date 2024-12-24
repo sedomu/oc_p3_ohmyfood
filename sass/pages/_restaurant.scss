@@ -107,6 +107,7 @@
     & > .txt {
         flex: 1;
         color: $black-point;
+        min-width: calc(100% - 100px);
         max-width: calc(100% - 30px);
         display: flex;
         flex-direction: column;
