@@ -479,15 +479,22 @@ main {
 .restaurant-menu__course > .txt {
   flex: 1;
   color: #000000;
+  max-width: calc(100% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .restaurant-menu__course > .txt > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.125rem;
   font-weight: 500;
 }
 .restaurant-menu__course > .txt > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.938rem;
   font-weight: 300;
 }
@@ -497,6 +504,8 @@ main {
   font-size: 0.938rem;
   color: #353535;
   font-weight: 700;
+  width: 30px;
+  text-align: right;
 }
 
 .button__animated {

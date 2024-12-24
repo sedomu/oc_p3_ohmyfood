@@ -107,29 +107,36 @@
     & > .txt {
         flex: 1;
         color: $black-point;
-
+        max-width: calc(100% - 30px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         & > h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: $large;
             font-weight: 500;
         }
 
         & > p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: $small;
             font-weight: 300;
         }
     } 
 
     & > .price {
-        // padding: 15px;
         align-self: flex-end;
         vertical-align: bottom;
         font-size: $small;
         color: $medium-gray-text;
         font-weight: 700;
+        width: 30px;
+        text-align: right;
     }
 
     // & > .choice {
