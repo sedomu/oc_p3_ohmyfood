@@ -156,11 +156,6 @@ main {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .footer .navbar__link {
-    flex-basis: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
   .footer {
     height: 114px;
     display: flex;
@@ -395,14 +390,14 @@ main {
 }
 
 .restaurant-menu {
-  width: calc(100% - 24px);
+  width: 100%;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
-  padding: 0 12px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
@@ -412,10 +407,11 @@ main {
 }
 
 .restaurant-menu__title {
-  width: calc(100% - 8px);
+  width: calc(100% - 24px);
   display: flex;
   align-items: first baseline;
   margin-top: 42px;
+  padding: 0 12px 20px 12px;
 }
 .restaurant-menu__title > h1 {
   flex: 1;
@@ -446,10 +442,21 @@ main {
 }
 
 .restaurant-menu__courses {
-  width: 100%;
+  width: calc(100% - 24px);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden;
+  padding: 0 12px 20px 12px;
+}
+.restaurant-menu__courses.animation-priority-1 {
+  animation: menu-appearing 600ms 250ms linear both;
+}
+.restaurant-menu__courses.animation-priority-2 {
+  animation: menu-appearing 600ms 400ms linear both;
+}
+.restaurant-menu__courses.animation-priority-3 {
+  animation: menu-appearing 600ms 550ms linear both;
 }
 @media screen and (min-width: 768px) {
   .restaurant-menu__courses {
@@ -475,12 +482,14 @@ main {
 
 .restaurant-menu__course {
   height: 40px;
+  min-height: 40px;
   border-radius: 15px;
   padding: 15px;
   background-color: #ffffff;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 .restaurant-menu__course > .txt {
   flex: 1;
@@ -513,6 +522,13 @@ main {
   font-weight: 700;
   width: 30px;
   text-align: right;
+}
+.restaurant-menu__course--action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .button__animated {
@@ -633,4 +649,13 @@ input {
   margin-left: 20px;
   margin-right: -15px;
   width: 60px;
+}
+
+@keyframes menu-appearing {
+  from {
+    max-height: 15px;
+  }
+  to {
+    max-height: 400px;
+  }
 }/*# sourceMappingURL=main.css.map */
