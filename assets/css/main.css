@@ -476,6 +476,7 @@ main {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 .restaurant-menu__course > .txt {
   flex: 1;
@@ -508,6 +509,13 @@ main {
   font-weight: 700;
   width: 30px;
   text-align: right;
+}
+.restaurant-menu__course--action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .button__animated {
