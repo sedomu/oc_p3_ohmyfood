@@ -13,14 +13,16 @@
 
 // ###################### menu
 .restaurant-menu {
-    width: calc(100% - 24px);
+    // width: calc(100% - 24px);
+    width: 100%;
     background-color: $light-gray-background;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
-    padding: 0 12px;
+    // padding: 0 12px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
 
     @include bp-tablet() {
@@ -30,10 +32,11 @@
 
 // ###################### menu title
 .restaurant-menu__title {
-    width: calc(100% - 8px);
+    width: calc(100% - 24px);
     display: flex;
     align-items: first baseline;
     margin-top: 42px;
+    padding: 0 12px 20px 12px;
 
     & > h1 {
         flex: 1;
@@ -64,10 +67,18 @@
 
 // ###################### menu cards
 .restaurant-menu__courses {
-    width: 100%;
+    width: calc(100% - 24px);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    overflow: hidden;
+    padding: 0 12px 20px 12px;
+
+    @for $i from 1 through 3 {
+        &.animation-priority-#{$i} {
+            animation: menu-appearing 600ms calc(250ms + ($i - 1) * 150ms) linear both;
+        }
+    }
 
     @include bp-tablet() {
         max-width: 630px;
@@ -95,6 +106,7 @@
 
 .restaurant-menu__course {
     height: 40px;
+    min-height: 40px;
     border-radius: 15px;
     padding: 15px;
     background-color: $white-point;
