@@ -405,7 +405,7 @@ main {
   gap: 40px;
   align-items: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant-menu {
     max-width: 1055px;
   }
@@ -425,7 +425,7 @@ main {
   font-weight: 400;
   margin: 0 0 -20px 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant-menu__title > h1 {
     flex: 0 0 content;
   }
@@ -433,13 +433,13 @@ main {
 .restaurant-menu__title > .like-fa {
   flex: 0 0 50px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant-menu__title > .like-fa {
     flex: 0 0 content;
     margin-left: 24px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant-menu__title {
     justify-content: center;
   }
@@ -451,7 +451,7 @@ main {
   flex-direction: column;
   gap: 12px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant-menu__courses {
     max-width: 630px;
   }
