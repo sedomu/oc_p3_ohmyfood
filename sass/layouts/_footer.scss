@@ -41,10 +41,6 @@
                 display: none;
             }
         }
-
-        @include bp-desktop() {
-            flex-basis: 1;
-        }
     }
 
     @include bp-desktop() {

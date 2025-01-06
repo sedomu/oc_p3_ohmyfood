@@ -156,11 +156,6 @@ main {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .footer .navbar__link {
-    flex-basis: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
   .footer {
     height: 114px;
     display: flex;
