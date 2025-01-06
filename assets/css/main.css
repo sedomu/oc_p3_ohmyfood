@@ -44,7 +44,7 @@ body .sr-only {
 body section {
   padding: 48px 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body section {
     padding: 50px 180px;
   }
@@ -127,7 +127,7 @@ main {
   height: fit-content;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer .footer_logo {
     margin: 0 60px;
   }
@@ -137,7 +137,7 @@ main {
   flex-direction: column;
   gap: 7px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer .navbar {
     flex-direction: row;
     gap: 25px;
@@ -155,12 +155,12 @@ main {
 .footer .navbar__link--legal img {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer .navbar__link {
     flex-basis: 1;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer {
     height: 114px;
     display: flex;
@@ -183,7 +183,7 @@ main {
   width: 75vw;
   align-self: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero h2 {
     margin-bottom: 0;
     font-size: 2.5rem;
@@ -195,7 +195,7 @@ main {
   padding-bottom: 27px;
   width: 85vw;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero p {
     padding-bottom: 0;
   }
@@ -215,18 +215,18 @@ main {
   font-weight: 500;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero button {
     max-width: 218px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero > * {
     max-width: 645px;
     line-height: 50px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero {
     gap: 18px;
     width: calc(100% - 360px);
@@ -242,12 +242,12 @@ main {
 .steps__items {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .steps__items {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 35px;
   }
@@ -261,6 +261,8 @@ main {
   margin-left: 12px;
   align-items: center;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
+  width: 100%;
+  max-width: 500px;
 }
 .steps__item .number {
   color: #f6f6f6;
@@ -282,15 +284,16 @@ main {
 }
 .steps__item .txt {
   padding-left: 28px;
+  padding-right: 12px;
+  text-wrap: wrap;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .steps__item {
     flex: 1;
-    min-width: 320px;
-    max-width: 320px;
+    text-wrap: wrap;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .steps {
     width: calc(100% - 360px);
   }
@@ -312,8 +315,12 @@ main {
 @media screen and (min-width: 768px) {
   .restaurants__items {
     flex-direction: row;
-    gap: 50px;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__items {
+    gap: 50px;
   }
 }
 .restaurants__card {
@@ -365,11 +372,10 @@ main {
 }
 @media screen and (min-width: 768px) {
   .restaurants__card {
-    flex: 1 1 10%;
-    min-width: 350px;
+    flex: 1 1 40%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .restaurants {
     gap: 25px;
     width: calc(100% - 360px);

@@ -1,6 +1,12 @@
 // ###################### breakpoints
-@mixin bp-desktop {
+@mixin bp-tablet {
     @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bp-desktop {
+    @media screen and (min-width: 1024px) {
         @content;
     }
 }

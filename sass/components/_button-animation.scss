@@ -22,7 +22,7 @@
         }
     }
 
-    @include bp-desktop() {
+    @include bp-tablet() {
         max-width: 218px;
     }
 }
