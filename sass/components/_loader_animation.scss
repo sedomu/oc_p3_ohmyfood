@@ -55,11 +55,8 @@
 }
 
 @keyframes display-none {
-    from {
-        display: block;
-    }
     to {
-        display: none;
+        z-index: -1;
     }
 }
 
