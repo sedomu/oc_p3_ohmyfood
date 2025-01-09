@@ -365,6 +365,11 @@ main {
   bottom: 33px;
   right: 33px;
 }
+.restaurants__card > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 @media screen and (min-width: 768px) {
   .restaurants__card {
     flex: 1 1 40%;
@@ -710,13 +715,22 @@ input {
   }
 }
 @keyframes display-none {
-  from {
-    display: block;
-  }
   to {
-    display: none;
+    z-index: -1;
   }
 }
+@keyframes prevent-scrolling {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: auto;
+  }
+}
+body {
+  animation: prevent-scrolling 1ms 3600ms backwards;
+}
+
 .loader {
   display: flex;
   justify-content: center;

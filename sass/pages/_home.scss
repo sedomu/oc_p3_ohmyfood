@@ -1,8 +1,3 @@
-// ###################### loader
-.loader {
-    // display: none;
-}
-
 // ###################### hero
 .hero {
     display: flex;
@@ -214,6 +209,12 @@
             position: absolute;
             bottom: 33px;
             right: 33px;
+        }
+
+        > a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         @include bp-tablet() {

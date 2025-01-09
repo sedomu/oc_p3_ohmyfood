@@ -55,12 +55,22 @@
 }
 
 @keyframes display-none {
+    to {
+        z-index: -1;
+    }
+}
+
+@keyframes prevent-scrolling {
     from {
-        display: block;
+        overflow: hidden;
     }
     to {
-        display: none;
+        overflow: auto;
     }
+}
+
+body {
+    animation: prevent-scrolling 1ms 3600ms backwards;
 }
 
 .loader {
