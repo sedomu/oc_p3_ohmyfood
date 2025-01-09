@@ -33,12 +33,23 @@
         justify-content: center;
         align-items: center;
         gap: 17px;
-        font-weight: 500;
+        
         background: $medium-gray-background;
         height: 50px;
         width: 100%;
         box-shadow: 0px 4px 4px 0 #00000026;
         z-index: 99;
+
+        input, input::placeholder {
+            display: inline;
+            font-weight: 500;
+            background: $medium-gray-background;
+            border: none;
+            color: $black-point;
+            width: 120px;
+            text-align: center;
+            font-size: $medium;
+        }
 
         img {
             width: 12px;

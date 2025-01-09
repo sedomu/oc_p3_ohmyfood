@@ -106,12 +106,31 @@ main {
   justify-content: center;
   align-items: center;
   gap: 17px;
-  font-weight: 500;
   background: #eaeaea;
   height: 50px;
   width: 100%;
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1490196078);
   z-index: 99;
+}
+.header__localisation input::-moz-placeholder {
+  display: inline;
+  font-weight: 500;
+  background: #eaeaea;
+  border: none;
+  color: #000000;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+}
+.header__localisation input, .header__localisation input::placeholder {
+  display: inline;
+  font-weight: 500;
+  background: #eaeaea;
+  border: none;
+  color: #000000;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
 }
 .header__localisation img {
   width: 12px;
