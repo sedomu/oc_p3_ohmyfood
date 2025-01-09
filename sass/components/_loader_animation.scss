@@ -63,6 +63,19 @@
     }
 }
 
+@keyframes prevent-scrolling {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: auto;
+    }
+}
+
+body {
+    animation: prevent-scrolling 1ms 3600ms backwards;
+}
+
 .loader {
     display: flex;
     justify-content: center;
