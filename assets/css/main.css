@@ -763,7 +763,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
-  animation: appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+  animation: appearing 600ms ease-out 3900ms reverse forwards, display-none 1ms 4500ms forwards;
   color: #000000;
   font-family: "Shrikhand", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.9;
@@ -776,7 +776,7 @@ body {
   position: absolute;
   top: 0;
   z-index: 110;
-  animation: display-none 1ms 4200ms forwards;
+  animation: display-none 1ms 4500ms forwards;
 }
 .loader__typing {
   position: relative;
@@ -786,13 +786,13 @@ body {
   overflow: hidden;
   max-width: 100%;
   z-index: 120;
-  animation: writing 800ms steps(6, jump-none) 600ms forwards, moving-up 1000ms 2400ms forwards, display-none 1ms 4200ms forwards;
+  animation: writing 800ms steps(6, jump-none) 1000ms forwards, moving-up 1000ms 2800ms forwards, display-none 1ms 4500ms forwards;
 }
 .loader__zoom {
   opacity: 0;
   font-size: 4000px;
   z-index: 120;
-  animation: scale-down-typo 600ms ease-in backwards, display-none 1ms 4200ms forwards;
+  animation: scale-down-typo 1000ms ease-out backwards, display-none 1ms 4500ms forwards;
 }
 .loader__txt {
   font-size: 30px;
@@ -802,13 +802,13 @@ body {
   padding-left: 14px;
   padding-right: 6px;
   z-index: 120;
-  animation: appearing 1ms 600ms backwards;
+  animation: appearing 1ms 1000ms backwards;
 }
 .loader__cursor {
   opacity: 0;
   font-size: 30px;
   z-index: 120;
-  animation: blink 600ms steps(2, jump-none) 4;
+  animation: blink 650ms steps(2, jump-none) 4;
 }
 
 .restaurants__card::after, .button__animated::after {
@@ -822,7 +822,7 @@ body {
   z-index: 120;
   border-radius: inherit;
   transform: translateY(calc(50vh - 29px));
-  animation: appearing 700ms ease-out 2000ms both, moving-zero 1000ms 2400ms forwards, appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+  animation: appearing 700ms ease-out 2400ms both, moving-zero 1000ms 2800ms forwards, appearing 600ms ease-out 3900ms reverse forwards, display-none 1ms 4500ms forwards;
 }
 
 .restaurants__card::after {

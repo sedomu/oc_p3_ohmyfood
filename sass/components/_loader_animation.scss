@@ -1,3 +1,31 @@
+// animation durations
+// in order to set timings accross all the animation, every step is a variable (time, delay, iteration count)
+// first step: "oh" is zooming down ("oh" is the loader's ::before)
+$scale-down-typo-duration: 1000ms;
+
+// second step: "ohmyfood" is revealing like a typing machine with a blinking cursor "!" ("!" is the loader's ::after)
+$appearing-text-area-delay: $scale-down-typo-duration; // 1000ms
+$writing-steps: 6;
+$writing-duration: 800ms;
+$writing-delay: $scale-down-typo-duration; // 1000ms
+
+$blink-duration: 650ms; //value for 1 cycle through
+$blink-iteration: 4;
+
+// third step: some UI elements are fading in with a theme colour to represent the home page
+$appearing-duration: 700ms;
+$appearing-delay: calc($writing-delay + $writing-duration + 600ms); // 3700ms
+
+// fourth step: everything is scrolling-up to match the revealed page layout
+$moving-up-duration: 1000ms;
+$moving-up-delay: calc($appearing-delay + $appearing-duration - 300ms); // 3900ms
+
+// final step: everything disappears
+$disappearing-duration: 600ms;
+$disappearing-delay: calc($moving-up-delay + $moving-up-duration + 100ms); // 5000ms
+$display-none-delay: calc($disappearing-duration + $disappearing-delay); // 5600ms
+
+// animation keyframes
 @keyframes blink {
     from {
         opacity: 0;
@@ -70,6 +98,8 @@
     }
 }
 
+
+// animated elements
 body {
     animation: prevent-scrolling 1ms 3600ms backwards;
 }
@@ -88,7 +118,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: $white-point;
-    animation: appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+    animation: appearing $disappearing-duration ease-out $disappearing-delay reverse forwards, display-none 1ms $display-none-delay forwards;
     color: $black-point;
     @include title-font();
     line-height: 1.9;
@@ -101,7 +131,7 @@ body {
         position: absolute;
         top: 0;
         z-index: 110;
-        animation: display-none 1ms 4200ms forwards;
+        animation: display-none 1ms $display-none-delay forwards;
     }
 
     &__typing{
@@ -112,14 +142,14 @@ body {
         overflow: hidden;
         max-width: 100%;
         z-index: 120;
-        animation: writing 800ms steps(6, jump-none) 600ms forwards, moving-up 1000ms 2400ms forwards, display-none 1ms 4200ms forwards;
+        animation: writing $writing-duration steps($writing-steps, jump-none) $writing-delay forwards, moving-up $moving-up-duration $moving-up-delay forwards, display-none 1ms $display-none-delay forwards;
     }
 
     &__zoom {
         opacity: 0;
         font-size: 4000px;
         z-index: 120;
-        animation: scale-down-typo 600ms ease-in backwards, display-none 1ms 4200ms forwards;
+        animation: scale-down-typo $scale-down-typo-duration ease-out backwards, display-none 1ms $display-none-delay forwards;
     }
 
     &__txt {
@@ -130,19 +160,15 @@ body {
         padding-left: 14px;
         padding-right: 6px;
         z-index: 120;
-        animation: appearing 1ms 600ms backwards;
+        animation: appearing 1ms $appearing-text-area-delay backwards;
     }
 
     &__cursor {
         opacity: 0;
         font-size: 30px;
         z-index: 120;
-        animation: blink 600ms steps(2, jump-none) 4;
+        animation: blink $blink-duration steps(2, jump-none) $blink-iteration;
     }
-
-        // & > * {
-        //     animation: display-none 1ms 4200ms forwards;
-        // }
 }
 
 .restaurants__card::after, .button__animated::after {
@@ -156,7 +182,7 @@ body {
     z-index:120;
     border-radius: inherit;
     transform: translateY(calc(50vh - 29px));
-    animation: appearing 700ms ease-out 2000ms both, moving-zero 1000ms 2400ms forwards, appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+    animation: appearing $appearing-duration ease-out $appearing-delay both, moving-zero $moving-up-duration $moving-up-delay forwards, appearing $disappearing-duration ease-out $disappearing-delay reverse forwards, display-none 1ms $display-none-delay forwards;
 }
 
 .restaurants__card::after {
