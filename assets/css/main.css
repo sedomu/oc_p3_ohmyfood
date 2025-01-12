@@ -474,13 +474,13 @@ main {
   padding: 0 12px 20px 12px;
 }
 .restaurant-menu__courses.animation-priority-1 {
-  animation: menu-appearing 600ms 250ms linear both;
+  animation: menu-appearing 800ms 250ms linear both;
 }
 .restaurant-menu__courses.animation-priority-2 {
-  animation: menu-appearing 600ms 400ms linear both;
+  animation: menu-appearing 800ms 400ms linear both;
 }
 .restaurant-menu__courses.animation-priority-3 {
-  animation: menu-appearing 600ms 550ms linear both;
+  animation: menu-appearing 800ms 550ms linear both;
 }
 @media screen and (min-width: 768px) {
   .restaurant-menu__courses {

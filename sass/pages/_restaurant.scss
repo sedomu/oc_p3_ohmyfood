@@ -76,7 +76,7 @@
 
     @for $i from 1 through 3 {
         &.animation-priority-#{$i} {
-            animation: menu-appearing 600ms calc(250ms + ($i - 1) * 150ms) linear both;
+            animation: menu-appearing 800ms calc(250ms + ($i - 1) * 150ms) linear both;
         }
     }
 
