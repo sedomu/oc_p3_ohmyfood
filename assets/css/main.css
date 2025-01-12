@@ -106,12 +106,31 @@ main {
   justify-content: center;
   align-items: center;
   gap: 17px;
-  font-weight: 500;
   background: #eaeaea;
   height: 50px;
   width: 100%;
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1490196078);
   z-index: 99;
+}
+.header__localisation input::-moz-placeholder {
+  display: inline;
+  font-weight: 500;
+  background: #eaeaea;
+  border: none;
+  color: #000000;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+}
+.header__localisation input, .header__localisation input::placeholder {
+  display: inline;
+  font-weight: 500;
+  background: #eaeaea;
+  border: none;
+  color: #000000;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
 }
 .header__localisation img {
   width: 12px;
@@ -455,13 +474,13 @@ main {
   padding: 0 12px 20px 12px;
 }
 .restaurant-menu__courses.animation-priority-1 {
-  animation: menu-appearing 600ms 250ms linear both;
+  animation: menu-appearing 800ms 250ms linear both;
 }
 .restaurant-menu__courses.animation-priority-2 {
-  animation: menu-appearing 600ms 400ms linear both;
+  animation: menu-appearing 800ms 400ms linear both;
 }
 .restaurant-menu__courses.animation-priority-3 {
-  animation: menu-appearing 600ms 550ms linear both;
+  animation: menu-appearing 800ms 550ms linear both;
 }
 @media screen and (min-width: 768px) {
   .restaurant-menu__courses {
@@ -716,7 +735,7 @@ input {
 }
 @keyframes display-none {
   to {
-    z-index: -1;
+    height: 0px;
   }
 }
 @keyframes prevent-scrolling {
@@ -735,20 +754,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   position: absolute;
-  z-index: 101;
+  z-index: 110;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #ffffff;
-  animation: appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+  animation: appearing 600ms ease-out 3900ms reverse forwards, display-none 1ms 4500ms forwards;
   color: #000000;
   font-family: "Shrikhand", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.9;
+}
+.loader::after {
+  content: "!";
+  height: 1000vh;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  z-index: 110;
+  animation: display-none 1ms 4500ms forwards;
 }
 .loader__typing {
   position: relative;
@@ -757,12 +785,14 @@ body {
   align-items: center;
   overflow: hidden;
   max-width: 100%;
-  animation: writing 800ms steps(6, jump-none) 600ms forwards, moving-up 1000ms 2400ms forwards;
+  z-index: 120;
+  animation: writing 800ms steps(6, jump-none) 1000ms forwards, moving-up 1000ms 2800ms forwards, display-none 1ms 4500ms forwards;
 }
 .loader__zoom {
   opacity: 0;
   font-size: 4000px;
-  animation: scale-down-typo 600ms ease-in backwards;
+  z-index: 120;
+  animation: scale-down-typo 1000ms ease-out backwards, display-none 1ms 4500ms forwards;
 }
 .loader__txt {
   font-size: 30px;
@@ -771,12 +801,14 @@ body {
   opacity: 1;
   padding-left: 14px;
   padding-right: 6px;
-  animation: appearing 1ms 600ms backwards;
+  z-index: 120;
+  animation: appearing 1ms 1000ms backwards;
 }
 .loader__cursor {
   opacity: 0;
   font-size: 30px;
-  animation: blink 600ms steps(2, jump-none) 4;
+  z-index: 120;
+  animation: blink 650ms steps(2, jump-none) 4;
 }
 
 .restaurants__card::after, .button__animated::after {
@@ -787,10 +819,10 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 102;
+  z-index: 120;
   border-radius: inherit;
   transform: translateY(calc(50vh - 29px));
-  animation: appearing 700ms ease-out 2000ms both, moving-zero 1000ms 2400ms forwards, appearing 600ms ease-out 3600ms reverse forwards, display-none 1ms 4200ms forwards;
+  animation: appearing 700ms ease-out 2400ms both, moving-zero 1000ms 2800ms forwards, appearing 600ms ease-out 3900ms reverse forwards, display-none 1ms 4500ms forwards;
 }
 
 .restaurants__card::after {
