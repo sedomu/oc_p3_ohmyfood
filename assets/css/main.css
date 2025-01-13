@@ -746,7 +746,7 @@ input {
     overflow: auto;
   }
 }
-body {
+body.loading {
   animation: prevent-scrolling 1ms 3600ms backwards;
 }
 
@@ -811,7 +811,7 @@ body {
   animation: blink 650ms steps(2, jump-none) 4;
 }
 
-.restaurants__card::after, .button__animated::after {
+.restaurants__card::after, .button__animated--loading::after {
   content: "";
   display: block;
   position: absolute;
