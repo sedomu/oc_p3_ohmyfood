@@ -100,7 +100,7 @@ $display-none-delay: calc($disappearing-duration + $disappearing-delay); // 5600
 
 
 // animated elements
-body {
+body.loading {
     animation: prevent-scrolling 1ms 3600ms backwards;
 }
 
@@ -171,7 +171,7 @@ body {
     }
 }
 
-.restaurants__card::after, .button__animated::after {
+.restaurants__card::after, .button__animated--loading::after {
     content: "";
     display: block;
     position: absolute;
