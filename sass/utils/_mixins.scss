@@ -11,12 +11,6 @@
     }
 }
 
-@mixin bp-desktop--large {
-    @media screen and (min-width: 1440px) {
-        @content;
-    }
-}
-
 // ###################### mixins
 @mixin title-font {
     font-family: "Shrikhand", "Franklin Gothic Medium", "Arial Narrow", Arial,

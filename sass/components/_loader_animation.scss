@@ -124,7 +124,7 @@ body.loading {
     line-height: 1.9;
 
     &::after {
-        content:"!";
+        content:"";
         height: 1000vh;
         width: 100%;
         background-color: $white-point;
