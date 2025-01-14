@@ -769,7 +769,7 @@ body.loading {
   line-height: 1.9;
 }
 .loader::after {
-  content: "!";
+  content: "";
   height: 1000vh;
   width: 100%;
   background-color: #ffffff;
