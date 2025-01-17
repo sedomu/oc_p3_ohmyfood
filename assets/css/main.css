@@ -684,16 +684,16 @@ input {
   }
 }
 @keyframes blink {
-  from {
+  from, to {
     opacity: 0;
   }
-  to {
+  50% {
     opacity: 1;
   }
 }
 @keyframes writing {
   from {
-    width: 40px;
+    width: 55px;
   }
   to {
     width: 180px;
@@ -786,7 +786,7 @@ body.loading {
   overflow: hidden;
   max-width: 100%;
   z-index: 120;
-  animation: writing 800ms steps(6, jump-none) 1000ms forwards, moving-up 1000ms 2800ms forwards, display-none 1ms 4500ms forwards;
+  animation: writing 800ms steps(6, end) 1000ms forwards, moving-up 1000ms 2800ms forwards, display-none 1ms 4500ms forwards;
 }
 .loader__zoom {
   opacity: 0;
@@ -808,7 +808,7 @@ body.loading {
   opacity: 0;
   font-size: 30px;
   z-index: 120;
-  animation: blink 650ms steps(2, jump-none) 4;
+  animation: blink 650ms steps(1, end) 4;
 }
 
 .restaurants__card::after, .button__animated--loading::after {
