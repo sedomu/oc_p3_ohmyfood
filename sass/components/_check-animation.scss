@@ -22,6 +22,7 @@
         left: 15px;
         display: none;
 
+        &:hover + .check__block,
         &:checked + .check__block {
             margin-left: 20px;
             margin-right: -15px;
