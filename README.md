@@ -80,6 +80,10 @@ Then simply open the file `index.html` in your web browser:
 open ./index.html
 ```
 
+### 🤖 Deployment
+This project is automatically deployed to GitHub Pages via a GitHub Actions workflow.
+No manual deployment steps are required.
+
 ---
 
 ## 📜 Scripts available
